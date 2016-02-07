@@ -68,14 +68,7 @@ The `google-map` element renders a Google Map.
 
   </style>
   <template>
-    <google-maps-api id="api"
-      api-key="[[apiKey]]"
-      client-id="[[clientId]]"
-      version="[[version]]"
-      signed-in="[[signedIn]]"
-      language="[[language]]"
-      on-api-load="_mapApiLoaded"
-      maps-url="http://maps.google.cn/maps/api/js?callback=%%callback%%"></google-maps-api>
+    <google-maps-api id="api" on-api-load="_mapApiLoaded" library-url="[[libraryUrl]]"></google-maps-api>
 
     <div id="map"></div>
 
@@ -148,6 +141,11 @@ The `google-map` element renders a Google Map.
      * Polymer properties for the google-map custom element.
      */
     properties: {
+      libraryUrl: {
+        type: String,
+        value: "http://maps.google.cn/maps/api/js?callback=%%callback%%&v=3.exp&libraries=drawing,geometry,places,visualization&language=zh"
+      },
+
       /**
        * A Maps API key. To obtain an API key, see developers.google.com/maps/documentation/javascript/tutorial#api_key.
        */

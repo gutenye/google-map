@@ -29,7 +29,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.2.3",
-    "google-apis": "gutenye/google-apis#master",
+    "google-apis": "GoogleWebComponents/google-apis#^1.1.1",
     "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#^1.0.0",
     "iron-selector": "PolymerElements/iron-selector#^1.0.5"
   },
