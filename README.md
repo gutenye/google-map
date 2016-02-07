@@ -7,9 +7,10 @@ Forked from https://github.com/GoogleWebComponents/google-map
 
 ```
 $ bower install gutenye/google-map#master
-<google-map latitude="37.77493" longitude="-122.41942"></google-map>
+<google-map latitude="37.77493" longitude="-122.41942" library-url="http://maps.google.cn/maps/api/js?callback=%%callback%%&v=3.exp"></google-map>
 ```
 
-**Make it works in Angular**
+also needs to change `google-apis/google-map-api.html`
 
-need delete default language, version, ... value in `google-apis/google-map-api.html` so that `_computeUrl` only called once in lifetime.
+Due to `You have included the Google Maps API multiple times on this page. This may cause unexpected errors.` problem, so can not use compute to watch libraryUrl changes.
+
